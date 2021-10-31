@@ -20,16 +20,17 @@ xhr.onload = function () {
         let newsHtml = "";
 
 
-        let output = articles.map((x) => {
+        // 
+        let output = articles.forEach((x, index) => {
                 
             let news = `
 <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <h2 class="accordion-header" id="heading${index}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
           ${x.title}
         </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div id="collapse${index}" class="accordion-collapse collapse show" aria-labelledby="heading${index}" data-bs-parent="#newsAccordian">
         <div class="accordion-body">
         ${x.content}. <a href="${x.url}" target="_blank"> Read More here </a> 
         </div>
