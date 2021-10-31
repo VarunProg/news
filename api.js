@@ -31,7 +31,7 @@ xhr.onload = function () {
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-        ${x.content}. <a href="${x.url} target="_blank""> Read More here </a> 
+        ${x.content}. <a href="${x.url}" target="_blank"> Read More here </a> 
         </div>
     </div>
 </div>`
